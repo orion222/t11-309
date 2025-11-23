@@ -31,7 +31,7 @@ export const AuthProvider = ({ children }) => {
                 setUser(data['user']);
             }
             else {
-                console.error(data['message'])
+                return data.message;
             }
         }
         return null;
@@ -106,7 +106,7 @@ export const AuthProvider = ({ children }) => {
             navigate('/success');
         }
         else {
-            console.log(data['message']);
+            return data.message;
         }
     };
 
